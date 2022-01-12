@@ -5,9 +5,9 @@ public class ServCreditCalculator {
         double exponentiation = Math.pow( (1+monthRate), numOfMonths); //Расчитывам "степнную" составляющую из формулы расчета аннуитеного платежа
 
         double annuity = monthRate + ( monthRate/(exponentiation-1)); //Расчитываем аннуитетный коэффициент
-        double everyMonthMoney =  amountOfCredit * annuity; //Расчитываем ежемесячный платеж
+        //double everyMonthMoney =  amountOfCredit * annuity; //Расчитываем ежемесячный платеж
 
-        return everyMonthMoney;
+        return  Math.round(amountOfCredit * annuity);
 
     }
 
